@@ -45,13 +45,8 @@ io.on('connection', (socket) => {
         from: name
       });
     });
-
   });
-
-
 });
-
-
 
 server.listen(3000, () => {
   console.log('listening on *:3000');
