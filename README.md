@@ -2,8 +2,6 @@
 
 _Chat React App_
 
-[display](https://bio8oid.github.io/Chat-React_App/public)
+[display](https://chat---app.herokuapp.com/)
 
-to run - type in terminal: yarn start
-
-to test communication between users while project is running at http://localhost:8080/ open http://localhost:3000/ in another browser tab 
+To test chat between users open multiple tabs in your browser from above link, enter diferent names in each of them and chat ;)
