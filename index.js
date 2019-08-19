@@ -16,17 +16,13 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  //miejsce dla funkcji, które zostaną wykonane po podłączeniu klienta
 
-  // klient nasłuchuje na wiadomość wejścia do czatu
   socket.on('join', (name) => {
-    // użytkownika, który pojawił się w aplikacji, zapisujemy do serwisu trzymającego listę osób w czacie
     usersService.addUser({
       id: socket.id,
       name
     });
 
-    // aplikacja emituje zdarzenie update, które aktualizuje informację na temat listy użytkowników każdemu nasłuchującemu na wydarzenie 'update'
     io.emit('update', {
       users: usersService.getAllUsers()
     });
@@ -48,7 +44,7 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3000, () => {
-  console.log('listening on *:3000');
+server.listen(process.env.PORT || 5000, () => {
+  console.log('listening on *process.env.PORT || 5000');
 });
 

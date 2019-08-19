@@ -2,7 +2,7 @@
 
 _Chat React App_
 
-[display](https://bio8oid.github.io/26.5/public)
+[display](https://bio8oid.github.io/Chat-React_App/public)
 
 to run - type in terminal: yarn start
 
